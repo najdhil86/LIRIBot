@@ -31,7 +31,7 @@ if (something == "concert-this") {
    
     for (var i in data){
 
-      console.log(JSON.stringify(data.tracks.items[i].album.name))
+      console.log(JSON.stringify(data.tracks.items[i]))
 
 
     }
