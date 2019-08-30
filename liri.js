@@ -35,15 +35,23 @@ if (operation == "concert-this") {
     .get("https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp")
     .then(function(response){
 
-      console.log(response.data[0].venue.name);
+      for (let i = 0; i < 100; i++) {
 
-      console.log(response.data[0].venue.city +', '+response.data[0].venue.country);
-      
+        console.log('=================================================================')
+        console.log(' ')
+        
+        console.log(response.data[i].venue.name);
 
-      var concert_date = response.data[0].datetime;
-
-      console.log(moment(concert_date).format('L'));
-      // console.log(response.data.datetime);
+        console.log(response.data[i].venue.city +', '+response.data[i].venue.country);
+        
+  
+        var concert_date = response.data[i].datetime;
+  
+        console.log(moment(concert_date).format('L'));
+        
+          console.log(' ')
+          console.log('=================================================================')
+          }
 
     })
     
@@ -74,16 +82,35 @@ if (operation == "concert-this") {
       return console.log('Error occurred: ' + err);
     }
    
-    console.log(JSON.stringify(data.tracks.item))
+    // console.log(JSON.stringify(data.length));
     
-    console.log(
-      'Artist = ' + JSON.stringify(data.tracks.items[0].album.artists[0].name)
-    )
-    console.log('Album:' + JSON.stringify(data.tracks.items[0].album.name))
-    console.log('Song: ' + JSON.stringify(data.tracks.items[0].name))
-    console.log(
-      'Link: ' + JSON.stringify(data.tracks.items[0].external_urls.spotify)
-    )
+    
+    // console.log(
+    //   'Artist = ' + JSON.stringify(data.tracks.items[0].album.artists[0].name)
+    // )
+    // console.log('Album:' + JSON.stringify(data.tracks.items[0].album.name))
+    // console.log('Song: ' + JSON.stringify(data.tracks.items[0].name))
+    // console.log(
+    //   'Link: ' + JSON.stringify(data.tracks.items[0].external_urls.spotify)
+    // )
+
+    for (let i = 0; i < 100; i++) {
+
+      console.log('=================================================================')
+      console.log(' ')
+      
+      console.log(
+        'Artist = ' + JSON.stringify(data.tracks.items[i].album.artists[0].name)
+        )
+        console.log('Album:' + JSON.stringify(data.tracks.items[i].album.name))
+        console.log('Song: ' + JSON.stringify(data.tracks.items[i].name))
+        console.log(
+          'Link: ' + JSON.stringify(data.tracks.items[i].external_urls.spotify)
+          )
+      
+        console.log(' ')
+        console.log('=================================================================')
+        }
   });
 
 
