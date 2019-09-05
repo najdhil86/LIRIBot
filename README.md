@@ -17,8 +17,7 @@ node liri.js spotify-this-song All the Small Things
 
 ### Demo
 
-
-<iframe width="1425" height="541" src="https://www.youtube.com/embed/Se27z7c87Wg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Spotify This Song](http://img.youtube.com/vi/Se27z7c87Wg/0.jpg)](http://www.youtube.com/watch?v=Se27z7c87Wg "Spotify This Song")
 
 ## Concert-This
 
