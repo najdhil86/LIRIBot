@@ -17,8 +17,7 @@ node liri.js spotify-this-song All the Small Things
 
 ### Demo
 
-
-<iframe width="1425" height="541" src="https://www.youtube.com/embed/Se27z7c87Wg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Demo](https://youtu.be/Se27z7c87Wg)
 
 ## Concert-This
 
@@ -36,7 +35,7 @@ node liri.js concert-this post malone
 
 ### Demo
 
-GIF here
+[Demo](https://youtu.be/oLswi6Dw8UY)
 
 ## Movie-This
 
@@ -54,7 +53,7 @@ node liri.js movie-this lion king
 
 ### Demo
 
-GIF here
+[Demo](https://youtu.be/Fz61PTZSc40)
 
 ## Do-What-It-Says
 
@@ -70,5 +69,4 @@ node liri.js do-what-it-says
 
 ### Demo
 
-GIF here
-
+[Demo](https://youtu.be/MUDfJZ5Qd0Y)

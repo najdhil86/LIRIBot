@@ -82,7 +82,7 @@ function spotify_this_song(a, b) {
       if (err) {
         return console.log("Error occurred: " + err);
       }
-      
+
       for (let i = 0; i < 100; i++) {
         console.log(
           "================================================================="
@@ -108,62 +108,53 @@ function spotify_this_song(a, b) {
   }
 }
 
-//Test the functionality of Spotify This Song
-if ( operation == 'spotify-this-song' && process.argv[3] == undefined) {
+// Making sure the user sees results of The Sign by Ace of Base if they do not search for a song
 
-  var user_input_filler = 'The Sign by Ace of Base'
-
-  console.log(spotify_this_song(operation,'The Sign by Ace of Base'));
-  
+if (operation == "spotify-this-song" && process.argv[3] == undefined) {
+  console.log(spotify_this_song(operation, "The Sign Ace of Base"));
 } else {
-
-  console.log(spotify_this_song(operation,user_input));
-  
+  console.log(spotify_this_song(operation, user_input));
 }
-
-
 
 //Movie This
 function movie_this(a, b) {
   if (a == "movie-this") {
     axios
-    .get(`https://www.omdbapi.com/?t=${b}&y=&plot=short&apikey=trilogy`)
+      .get(`https://www.omdbapi.com/?t=${b}&y=&plot=short&apikey=trilogy`)
       .then(function(response) {
-        
         console.log(
           "================================================================="
-          );
-          
-          console.log("Title: " + response.data.Title);
-          
-          console.log("Year: " + response.data.Year);
-          
-          console.log("IMDB Rating: " + response.data.imdbRating);
-          
-          
-          for (let i = 0; i < response.data.Ratings.length; i++) {
-            let rating = response.data.Ratings[i];
-            
-            if (rating.Source == "Rotten Tomatoes") {
-              console.log("Rotten Tomatoes Rating: " + rating.Value);
-              
-              break;
-            }
+        );
+
+        console.log("Title: " + response.data.Title);
+
+        console.log("Year: " + response.data.Year);
+
+        console.log("IMDB Rating: " + response.data.imdbRating);
+
+        for (let i = 0; i < response.data.Ratings.length; i++) {
+          let rating = response.data.Ratings[i];
+
+          if (rating.Source == "Rotten Tomatoes") {
+            console.log("Rotten Tomatoes Rating: " + rating.Value);
+
+            break;
           }
-          
-          console.log("Country: " + response.data.Country);
-          
-          console.log("Language: " + response.data.Language);
-          
-          console.log("Plot: " + response.data.Plot);
-          
-          console.log("Actors: " + response.data.Actors);
-          
-          console.log(" ");
-          
-          console.log(
-            "================================================================="
-            );
+        }
+
+        console.log("Country: " + response.data.Country);
+
+        console.log("Language: " + response.data.Language);
+
+        console.log("Plot: " + response.data.Plot);
+
+        console.log("Actors: " + response.data.Actors);
+
+        console.log(" ");
+
+        console.log(
+          "================================================================="
+        );
       })
 
       .catch(function(error) {
@@ -183,43 +174,34 @@ function movie_this(a, b) {
         }
         console.log(error.config);
       });
-    }
-    
-    
   }
-  if (operation == 'movie-this' && process.argv[3] == undefined ){
-    
-    
-    console.log(movie_this(operation, 'Mr. Nobody'));
-    
-    
-  } else {
-    
-    console.log(movie_this(operation, user_input));
-    
+}
+
+// Making sure the user sees result of Mr. Nobody if they do not search for a movie
+
+if (operation == "movie-this" && process.argv[3] == undefined) {
+  console.log(movie_this(operation, "Mr. Nobody"));
+} else {
+  console.log(movie_this(operation, user_input));
+}
+
+// Do What it Says
+
+if (operation == "do-what-it-says") {
+  var fs = require("fs");
+
+  var contents = fs.readFileSync("./random.txt", "utf8");
+
+  var text_input = contents.split(",");
+
+  var says_command = text_input[0];
+  var says_user_input = text_input[1];
+
+  if (says_command == "spotify-this-song") {
+    console.log(spotify_this_song(says_command, says_user_input));
+  } else if (says_command == "concert_this") {
+    console.log(concert_this(says_command, says_user_input));
+  } else if (says_command == "movie-this") {
+    console.log(movie_this(says_command, says_user_input));
   }
-  
-  if (operation == "do-what-it-says") {
-    var fs = require("fs");
-    
-    var contents = fs.readFileSync("./random.txt", "utf8");
-    
-    var text_input = contents.split(",");
-    
-    var says_command = text_input[0];
-    var says_user_input = text_input[1];
-    
-    if (says_command == "spotify-this-song"){
-      
-      console.log(spotify_this_song(says_command,says_user_input))
-      
-    } else if (says_command == "concert_this"){
-      
-    console.log(concert_this(says_command,says_user_input))
-
-}else if (says_command == "movie-this"){
-
-    console.log(movie_this(says_command,says_user_input))
-
-} 
 }
