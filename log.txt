@@ -1,0 +1,102 @@
+========================
+tracks found 20
+Artist = "Ace of Base"
+Song = "The Sign"
+Link = "https://open.spotify.com/track/0hrBpAOgrt8RXigk83LLNE"
+Album = "The Sign (US Album) [Remastered]"
+========================
+Artist = "Ace of Base"
+Song = "All That She Wants"
+Link = "https://open.spotify.com/track/6kWJvPfC4DgUpRsXKNa9z9"
+Album = "The Sign (US Album) [Remastered]"
+========================
+Artist = "Ace of Base"
+Song = "The Sign"
+Link = "https://open.spotify.com/track/3DYVWvPh3kGwPasp7yjahc"
+Album = "Greatest Hits"
+========================
+Artist = "Ace of Base"
+Song = "Don't Turn Around"
+Link = "https://open.spotify.com/track/4SYMibQ93bfzOk6uzkF0dO"
+Album = "The Sign (US Album) [Remastered]"
+========================
+Artist = "Ace of Base"
+Song = "Happy Nation"
+Link = "https://open.spotify.com/track/7fb22pjF62S9r1s1pian5K"
+Album = "The Sign (US Album) [Remastered]"
+========================
+Artist = "Ace of Base"
+Song = "Wheel of Fortune"
+Link = "https://open.spotify.com/track/08bZOAr9YLpCLL0Jmtsgbi"
+Album = "The Sign (US Album) [Remastered]"
+========================
+Artist = "Ace of Base"
+Song = "Living in Danger"
+Link = "https://open.spotify.com/track/5ICwDM1fzgqv7HNFUIjPyx"
+Album = "The Sign (US Album) [Remastered]"
+========================
+Artist = "Ace of Base"
+Song = "Dancer in a Daydream"
+Link = "https://open.spotify.com/track/56r15mfaTXZoGEYBe2FHur"
+Album = "The Sign (US Album) [Remastered]"
+========================
+Artist = "Ace of Base"
+Song = "Young and Proud"
+Link = "https://open.spotify.com/track/6sUq6M1iKXQLZHZqefgtEq"
+Album = "The Sign (US Album) [Remastered]"
+========================
+Artist = "Ace of Base"
+Song = "Waiting for Magic - Total Remix 7\" Version"
+Link = "https://open.spotify.com/track/21ra9MgsyMTrxCvIPObFGL"
+Album = "The Sign (US Album) [Remastered]"
+========================
+Artist = "Ace of Base"
+Song = "The Sign"
+Link = "https://open.spotify.com/track/3Gxku40T2RGPqtLYpFAngP"
+Album = "Happy Nation (U.S. Version) [Remastered]"
+========================
+Artist = "Ace of Base"
+Song = "Voulez-Vous danser"
+Link = "https://open.spotify.com/track/2F71FlxVyNcoHj3MrHJF5e"
+Album = "The Sign (US Album) [Remastered]"
+========================
+Artist = "Ace of Base"
+Song = "My Mind - Mindless Mix"
+Link = "https://open.spotify.com/track/2Ol8ieTGPnzi9kVvZ1f7IN"
+Album = "The Sign (US Album) [Remastered]"
+========================
+Artist = "Ace of Base"
+Song = "Mr Ace - Demo 1991 Bonus Track"
+Link = "https://open.spotify.com/track/6IcW0DmqcuVESqTIbgkyH8"
+Album = "The Sign (US Album) [Remastered]"
+========================
+Artist = "Ace of Base"
+Song = "All That She Wants - Banghra Version"
+Link = "https://open.spotify.com/track/372oGXavXzqZJp5hzXxZlu"
+Album = "The Sign (US Album) [Remastered]"
+========================
+Artist = "Ace of Base"
+Song = "The Sign"
+Link = "https://open.spotify.com/track/3JXzEzQCYrblna7SCaegAm"
+Album = "The Sign (The Remixes)"
+========================
+Artist = "Ace of Base"
+Song = "The Sign - Long Version"
+Link = "https://open.spotify.com/track/1csXR5Vn2SgOi7cw0lxJv8"
+Album = "The Sign (The Remixes)"
+========================
+Artist = "Ace of Base"
+Song = "The Sign - Ultimix"
+Link = "https://open.spotify.com/track/3sM1ncxPiL0UCBlIVkb637"
+Album = "The Sign (The Remixes)"
+========================
+Artist = "Ace of Base"
+Song = "The Sign"
+Link = "https://open.spotify.com/track/2ZkiqOy0WpIXRfj1WP9fyg"
+Album = "The Sign (The Remixes)"
+========================
+Artist = "Ace of Base"
+Song = "The Sign - Long Version"
+Link = "https://open.spotify.com/track/2DvWVUrRXB0HYrjDqQWjjt"
+Album = "The Sign (The Remixes)"
+========================
