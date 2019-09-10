@@ -10,7 +10,6 @@ const axios = require("axios");
 
 const moment = require("moment");
 
-var artist = process.argv.slice(3).join(" ");
 
 const Spotify = require("node-spotify-api");
 
@@ -18,36 +17,28 @@ var spotify = new Spotify(keys.spotify);
 
 //Concert This
 
-function concert_this(a, b) {
-  if (a == "concert-this") {
+function concert_this(query) {
+  const output = [];
     axios
       .get(
-        `https://rest.bandsintown.com/artists/${b}/events?app_id=codingbootcamp`
+        `https://rest.bandsintown.com/artists/${query}/events?app_id=codingbootcamp`
       )
       .then(function(response) {
         for (let i = 0; i < response.data.length; i++) {
-          console.log(
-            "================================================================="
-          );
-          console.log(" ");
+        
+          output.push(response.data[i].venue.name);
 
-          console.log(response.data[i].venue.name);
-
-          console.log(
+          output.push(
             response.data[i].venue.city + ", " + response.data[i].venue.country
           );
 
           var concert_date = response.data[i].datetime;
 
-          console.log(moment(concert_date).format("L"));
-
-          console.log(" ");
-          console.log(
-            "================================================================="
-          );
+          output.push(moment(concert_date).format("L"));
         }
+        
       })
-
+      
       .catch(function(error) {
         if (error.response) {
           // The request was made and the server responded with a status code
@@ -65,55 +56,45 @@ function concert_this(a, b) {
         }
         console.log(error.config);
       });
-  }
+
+      return console.log(output.join('\n'))
 }
 
 //Testing the functionality of Concert This
+if (operation == 'concert-this'){
 
-console.log(concert_this(operation, user_input));
+  console.log(concert_this(user_input));
+}
 
 // Spotify This Song
 
-function spotify_this_song(a, b) {
-  //IF the user inputs no song to look up
+function spotify_this_song(query) {
+  return spotify.search({ type: "track", query: query, limit: 20 })
+    .then(function (data) {
 
-  if (a == "spotify-this-song") {
-    spotify.search({ type: "track", query: b, limit: 20 }, function(err, data) {
-      if (err) {
-        return console.log("Error occurred: " + err);
-      }
+      const output = [];
 
       for (let i = 0; i < data.tracks.items.length; i++) {
-        console.log(
-          "================================================================="
-        );
-        console.log(" ");
 
-        console.log(
-          "Artist = " +
-            JSON.stringify(data.tracks.items[i].album.artists[0].name)
-        );
-        console.log("Album:" + JSON.stringify(data.tracks.items[i].album.name));
-        console.log("Song: " + JSON.stringify(data.tracks.items[i].name));
-        console.log(
-          "Link: " + JSON.stringify(data.tracks.items[i].external_urls.spotify)
-        );
-
-        console.log(" ");
-        console.log(
-          "================================================================="
-        );
+        output.push("Artist = " + data.tracks.items[i].album.artists[0].name);
+        output.push("Album:" + data.tracks.items[i].album.name);
+        output.push("Song: " + data.tracks.items[i].name);
+        output.push("Link: " + data.tracks.items[i].external_urls.spotify);
       }
+      return output.join('\n')
     });
-  }
 }
 
 // Making sure the user sees results of The Sign by Ace of Base if they do not search for a song
-
-if (operation == "spotify-this-song" && process.argv[3] == undefined) {
-  console.log(spotify_this_song(operation, "The Sign Ace of Base"));
-} else {
-  console.log(spotify_this_song(operation, user_input));
+if (operation == "spotify-this-song") {
+  let query = user_input;
+  if (query == undefined) {
+    query = "The Sign Ace of Base";
+  }
+  
+  spotify_this_song(user_input).then(function(output) {
+    console.log(output);
+  });
 }
 
 //Movie This
